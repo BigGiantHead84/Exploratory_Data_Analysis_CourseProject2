@@ -1,4 +1,4 @@
-#Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
+#Question4: Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
 
 ems_from_coalcomb_by_year<- function(){
     library(dplyr) # Let's use Dplyr library with this dataq
