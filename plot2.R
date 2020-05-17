@@ -2,6 +2,7 @@
 
 total_ems_BaltimoreCity <- function(){
     library(dplyr) # Let's use Dplyr library with this dataq
+    NEI <- readRDS("summarySCC_PM25.rds")
     NEI <- as_tibble(NEI) #convert the dataframe to tibble to work with Dplyr
     NEI_Baltimore <- NEI %>% filter(fips=="24510") #filter out everything else except Batimore City data
     NEI_Baltimore_by_year <- NEI_Baltimore %>% group_by(year) #group Baltimore data by year

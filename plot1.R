@@ -2,6 +2,7 @@
 
 total_ems_by_year <- function(){
     library(dplyr) # Let's use Dplyr library with this dataq
+    NEI <- readRDS("summarySCC_PM25.rds")
     NEI <- as_tibble(NEI) #convert the dataframe to tibble to work with Dplyr
     by_year <- group_by(NEI,year) #group by year so that we can work with summarise based on each year
     ems_yearly <- by_year %>% summarise(ems=mean(Emissions)) #take the mean of all emission for a given year

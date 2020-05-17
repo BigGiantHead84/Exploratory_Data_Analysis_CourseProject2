@@ -3,7 +3,7 @@
 ems_by_source_year_Baltimore <- function(){
     library(dplyr) # Let's use Dplyr library with this dataq
     library(ggplot2) #Include ggplot2 as well
-    
+    NEI <- readRDS("summarySCC_PM25.rds")
     NEI <- as_tibble(NEI) #convert the dataframe to tibble to work with Dplyr
     NEI_Baltimore <- NEI %>% filter(fips=="24510") #filter out everything else except Batimore City data
     NEI_Baltimore$type <- as.factor(NEI_Baltimore$type) #let's convert the type to factoruniq
